@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title> Animacija </title>
+    
+</head>
+
+    <body>
+
+        <style>
+            
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #050210;
+            
+        }
+        
+        .anime {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+            animation: rotation 1s linear infinite;
+                    
+        }    
+        
+        .anime span {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background:linear-gradient(#fb5dad, #55fb9f, #b97aff);  
+                 
+        }
+
+        
+        .anime::after {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            background: hsl(253, 78%, 4%);
+            border-radius: 50%;
+               
+        }
+
+        #insade {
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            animation: scaleUp 1s linear infinite;
+            background-color: hsl(253, 78%, 7%)
+                
+        }
+
+        .anime span:nth-child(1) {
+            filter: blur(5px);
+        }
+
+        .anime span:nth-child(1) {
+            filter: blur(10px);
+        }
+
+        .anime span:nth-child(1) {
+            filter: blur(20px);
+        }
+
+        .anime span:nth-child(1) {
+            filter: blur(55px);
+        }
+
+      
+
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes scaleUp {
+            from {
+                width: 0px;
+                height: 0px;
+            }
+            to {
+                width: 330px;
+                height: 330px;
+            }
+        }
+        
+    </style>
+
+        <div class="anime">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div id="insade"></div>
+      
+
+    </body>
+</html>
